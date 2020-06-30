@@ -1,1 +1,50 @@
-<p>list-elements works!</p>
+<div>
+  <mat-card class="searchCard">
+    <mat-card-content>
+      <div class="searchParam">
+        <mat-form-field appearance="fill" class="dropDownLeft">
+          <mat-label>Element</mat-label>
+          <mat-select [(ngModel)]="selectedCategory" name="category">
+            <mat-option value="company">Company</mat-option>
+            <mat-option value="computer">Computer</mat-option>
+          </mat-select>
+        </mat-form-field>
+
+        <mat-form-field appearance="fill" class="searchBar">
+          <mat-label>Search</mat-label>
+          <input matInput type="text" [(ngModel)]="value" />
+          <button
+            mat-button
+            *ngIf="value"
+            matSuffix
+            mat-icon-button
+            aria-label="Clear"
+            (click)="value = ''"
+          >
+            <mat-icon>close</mat-icon>
+          </button>
+        </mat-form-field>
+
+        <mat-form-field appearance="fill" class="dropDownRight">
+          <mat-label>Number of elements</mat-label>
+          <mat-select [(ngModel)]="selectedNumberElement" name="numberelement">
+            <mat-option value="10">10 elements</mat-option>
+            <mat-option value="50">50 elements</mat-option>
+            <mat-option value="100">100 elements</mat-option>
+          </mat-select>
+        </mat-form-field>
+
+        <mat-chip-list aria-label="Order selection">
+          <p class="order">Order By :</p>
+          <mat-chip>Name</mat-chip>
+          <mat-chip>Date d'introduction</mat-chip>
+          <mat-chip>Date de fin de service</mat-chip>
+          <mat-chip>Société</mat-chip>
+        </mat-chip-list>
+      </div>
+    </mat-card-content>
+    <button mat-raised-button color="primary" class="searchButton">
+      Search
+    </button>
+  </mat-card>
+</div>
