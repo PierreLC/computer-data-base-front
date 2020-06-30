@@ -1,25 +1,25 @@
-<mat-toolbar>
-  <mat-toolbar-row>
-    <!-- mettre l'adresse sur laquelle router la page centrale -->
+ <mat-toolbar-row class="toolbar">
     <a mat-button [routerLink]="'/applogin'">
-      <mat-icon>weeekend</mat-icon>
+      <mat-icon>home</mat-icon>
       Home
     </a>
-    <a mat-button [routerLink]="'/applogin' + '/add'">
-      <mat-icon>add_box</mat-icon>
+    <a class="addButton" mat-button [routerLink]="'/applogin' + '/add'">
+      <mat-icon class = "iconAdd">add_box</mat-icon>
       Add
     </a>
-    <a mat-button [routerLink]="'/applogin'">
+    <a class="notificationsButton" mat-button [routerLink]="'/applogin'">
       <mat-icon>notifications</mat-icon>
       Notification
     </a>
-    <a mat-button [routerLink]="'/applogin'">
+    <a class="languagesButton" mat-button [routerLink]="'/applogin'">
       <mat-icon>language</mat-icon>
       Language
     </a>
-    <a mat-button [routerLink]="'/authentication'">
+    <a class="personButton" mat-button [routerLink]="'/authentication'">
       <mat-icon>person</mat-icon>
       Disconnect
     </a>
   </mat-toolbar-row>
-</mat-toolbar>
+  <mat-toolbar class="LBC">
+
+  </mat-toolbar>
