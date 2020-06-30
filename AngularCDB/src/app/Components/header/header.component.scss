@@ -1,0 +1,44 @@
+.addButton {
+  position: relative;
+  left: 600px;
+  background-color: #3b5998;
+  width: 300px;
+}
+
+.iconAdd {
+  color: white;
+  position: absolute;
+  left: 5px;
+  top: 5px;
+}
+
+.notificationsButton {
+  position: relative;
+  left: 1000px;
+}
+
+.languagesButton {
+  position: relative;
+  left: 1000px;
+}
+
+.personButton {
+  position: relative;
+  left: 1000px;
+}
+
+.toolbar {
+  background-color: white;
+  height: 50px;
+}
+
+.LBC {
+  position: relative;
+  background-color: #3b5998;
+  left: 0;
+  right: 0;
+  overflow: hidden;
+  height: 150px;
+  width: auto;
+  border-radius:0 0 50% 50%/0 0 100% 100%;
+}
