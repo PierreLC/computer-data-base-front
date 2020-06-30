@@ -7,6 +7,9 @@ import { HeaderComponent } from './Components/header/header.component';
 
 import { CustomMaterialModule } from './custom-material/custom-material.module';
 
+import { TranslateModule, TranslateLoader } from '@ngx-translate/core';
+import { TranslateHttpLoader } from '@ngx-translate/http-loader';
+
 import { AddElementComponent } from './Components/add-element/add-element.component';
 import { EditElementComponent } from './Components/edit-element/edit-element.component';
 import { ComputerDetailsComponent } from './Components/computer-details/computer-details.component';
@@ -16,7 +19,12 @@ import { ConnectionComponent } from './Components/Login-SignIn/connection/connec
 import { RegistrationComponent } from './Components/Login-SignIn/registration/registration.component';
 import { AuthenticationPageComponent } from './Components/Login-SignIn/authentication-page/authentication-page.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { HttpClient, HttpClientModule } from '@angular/common/http';
 
+export function HttpLoaderFactory(httpClient: HttpClient){
+
+  return new TranslateHttpLoader(httpClient);
+}
 
 @NgModule({
   declarations: [
@@ -31,11 +39,21 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
     RegistrationComponent,
     AuthenticationPageComponent,
   ],
+
   imports: [
     BrowserModule,
     AppRoutingModule,
     BrowserAnimationsModule,
     CustomMaterialModule,
+    HttpClientModule,
+    TranslateModule.forRoot({
+      defaultLanguage: 'fr',
+      loader: {
+        provide: TranslateLoader,
+        useFactory: HttpLoaderFactory,
+        deps: [HttpClient]
+      }
+    }),
   ],
   providers: [],
   bootstrap: [AppComponent]
