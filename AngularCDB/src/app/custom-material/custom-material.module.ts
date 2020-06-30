@@ -6,7 +6,7 @@ import { MatCardModule } from '@angular/material/card';
 import { MatButtonModule } from '@angular/material/button';
 import { MatExpansionModule } from '@angular/material/expansion';
 import { MatProgressSpinnerModule } from '@angular/material/progress-spinner';
-
+import { MatTableModule } from '@angular/material/table';
 
 
 const materialModule = [
@@ -16,6 +16,7 @@ const materialModule = [
   MatButtonModule,
   MatExpansionModule,
   MatProgressSpinnerModule,
+  MatTableModule,
 ];
 
 @NgModule({
@@ -29,11 +30,4 @@ const materialModule = [
   ]
 })
 
-
-@NgModule({
-  declarations: [],
-  imports: [
-    CommonModule
-  ]
-})
 export class CustomMaterialModule { }
