@@ -7,6 +7,8 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ComputerDetailsComponent implements OnInit {
 
+  panelOpenState: boolean;
+
   constructor() { }
 
   ngOnInit(): void {

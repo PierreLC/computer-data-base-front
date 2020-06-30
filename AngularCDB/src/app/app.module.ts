@@ -4,6 +4,9 @@ import { NgModule } from '@angular/core';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { HeaderComponent } from './Components/header/header.component';
+
+import { CustomMaterialModule } from './custom-material/custom-material.module';
+
 import { AddElementComponent } from './Components/add-element/add-element.component';
 import { EditElementComponent } from './Components/edit-element/edit-element.component';
 import { ComputerDetailsComponent } from './Components/computer-details/computer-details.component';
@@ -13,6 +16,7 @@ import { ConnectionComponent } from './Components/Login-SignIn/connection/connec
 import { RegistrationComponent } from './Components/Login-SignIn/registration/registration.component';
 import { AuthenticationPageComponent } from './Components/Login-SignIn/authentication-page/authentication-page.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+
 
 @NgModule({
   declarations: [
@@ -25,12 +29,13 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
     ListElementsComponent,
     ConnectionComponent,
     RegistrationComponent,
-    AuthenticationPageComponent
+    AuthenticationPageComponent,
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    BrowserAnimationsModule
+    BrowserAnimationsModule,
+    CustomMaterialModule,
   ],
   providers: [],
   bootstrap: [AppComponent]
