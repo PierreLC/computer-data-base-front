@@ -1,1 +1,25 @@
-<p>header works!</p>
+<mat-toolbar>
+  <mat-toolbar-row>
+    <!-- mettre l'adresse sur laquelle router la page centrale -->
+    <a mat-button [routerLink]="'/applogin'">
+      <mat-icon>weeekend</mat-icon>
+      Home
+    </a>
+    <a mat-button [routerLink]="'/applogin' + '/add'">
+      <mat-icon>add_box</mat-icon>
+      Add
+    </a>
+    <a mat-button [routerLink]="'/applogin'">
+      <mat-icon>notifications</mat-icon>
+      Notification
+    </a>
+    <a mat-button [routerLink]="'/applogin'">
+      <mat-icon>language</mat-icon>
+      Language
+    </a>
+    <a mat-button [routerLink]="'/authentication'">
+      <mat-icon>person</mat-icon>
+      Disconnect
+    </a>
+  </mat-toolbar-row>
+</mat-toolbar>
