@@ -12,6 +12,7 @@ import { ListElementsComponent } from './Components/list-elements/list-elements.
 import { ConnectionComponent } from './Components/Login-SignIn/connection/connection.component';
 import { RegistrationComponent } from './Components/Login-SignIn/registration/registration.component';
 import { AuthenticationPageComponent } from './Components/Login-SignIn/authentication-page/authentication-page.component';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 @NgModule({
   declarations: [
@@ -28,7 +29,8 @@ import { AuthenticationPageComponent } from './Components/Login-SignIn/authentic
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    BrowserAnimationsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
