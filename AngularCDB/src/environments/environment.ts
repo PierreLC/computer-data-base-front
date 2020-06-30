@@ -4,7 +4,7 @@
 
 export const environment = {
   production: false,
-  apiUrl: ""
+  apiUrl: "http://10.0.1.84:8080/webapp/computers"
 };
 
 /*
