@@ -16,6 +16,7 @@ import { ConnectionComponent } from './Components/Login-SignIn/connection/connec
 import { RegistrationComponent } from './Components/Login-SignIn/registration/registration.component';
 import { AuthenticationPageComponent } from './Components/Login-SignIn/authentication-page/authentication-page.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { FormsModule } from '@angular/forms';
 
 
 @NgModule({
@@ -36,6 +37,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
     AppRoutingModule,
     BrowserAnimationsModule,
     CustomMaterialModule,
+    FormsModule,
   ],
   providers: [],
   bootstrap: [AppComponent]
