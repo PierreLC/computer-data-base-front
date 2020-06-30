@@ -2,6 +2,7 @@ import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 import { AuthenticationPageComponent } from './Components/Login-SignIn/authentication-page/authentication-page.component'
 import { ListElementsComponent } from './Components/list-elements/list-elements.component'
+import { AddElementComponent } from './Components/add-element/add-element.component';
 
 
 const routes: Routes = [{
@@ -12,6 +13,11 @@ const routes: Routes = [{
 {
   path: 'applogin',
   component: ListElementsComponent,
+  pathMatch: 'full'
+},
+{
+  path: 'applogin/add',
+  component: AddElementComponent,
   pathMatch: 'full'
 },
 {
