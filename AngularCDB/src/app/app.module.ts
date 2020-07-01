@@ -20,8 +20,10 @@ import { RegistrationComponent } from './Components/Login-SignIn/registration/re
 import { AuthenticationPageComponent } from './Components/Login-SignIn/authentication-page/authentication-page.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { HttpClient, HttpClientModule } from '@angular/common/http';
+import { FormsModule } from '@angular/forms';
 
 export function HttpLoaderFactory(httpClient: HttpClient){
+
 
   return new TranslateHttpLoader(httpClient);
 }
@@ -46,6 +48,7 @@ export function HttpLoaderFactory(httpClient: HttpClient){
     BrowserAnimationsModule,
     CustomMaterialModule,
     HttpClientModule,
+    FormsModule,
     TranslateModule.forRoot({
       defaultLanguage: 'fr',
       loader: {

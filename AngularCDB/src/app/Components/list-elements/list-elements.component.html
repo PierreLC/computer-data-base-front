@@ -1,1 +1,71 @@
-<p>list-elements works!</p>
+<mat-card class="searchCard" style="margin-bottom: 30px;">
+  <mat-card-content style="margin-bottom: 0;">
+    <mat-form-field appearance="fill" class="topcardElements">
+      <mat-label>Element</mat-label>
+      <mat-select
+        [(ngModel)]="selectedCategory"
+        name="category"
+        (ngModelChange)="onSelectCategoryChange()"
+      >
+        <mat-option value="company">Company</mat-option>
+        <mat-option value="computer">Computer</mat-option>
+      </mat-select>
+    </mat-form-field>
+
+    <mat-form-field appearance="fill" class="searchBar topcardElements">
+      <mat-label>Search</mat-label>
+      <input matInput type="text" [(ngModel)]="value" />
+      <button
+        mat-button
+        *ngIf="value"
+        matSuffix
+        mat-icon-button
+        aria-label="Clear"
+        (click)="value = ''"
+      >
+        <mat-icon>close</mat-icon>
+      </button>
+    </mat-form-field>
+
+    <mat-form-field appearance="fill" class="topcardElements">
+      <mat-label>Number of elements</mat-label>
+      <mat-select [(ngModel)]="selectedNumberElement" name="numberelement">
+        <mat-option value="10">10 elements</mat-option>
+        <mat-option value="50">50 elements</mat-option>
+        <mat-option value="100">100 elements</mat-option>
+      </mat-select>
+    </mat-form-field>
+
+    <mat-chip-list
+      aria-label="Order selection"
+      *ngIf="selectedCategory == 'computer'"
+    >
+      <p class="order">Order By :</p>
+      <mat-chip (click)="ordered = 'name'">Name</mat-chip>
+      <mat-chip (click)="ordered = 'introduced'">Date d'introduction</mat-chip>
+      <mat-chip (click)="ordered = 'discontinued'"
+        >Date de fin de service</mat-chip
+      >
+      <mat-chip (click)="ordered = 'company'">Société</mat-chip>
+    </mat-chip-list>
+
+    <mat-chip-list
+      aria-label="Order selection"
+      *ngIf="selectedCategory == 'company'"
+    >
+      <p class="order">Order By :</p>
+      <mat-chip (click)="ordered = 'name'">Name</mat-chip>
+    </mat-chip-list>
+  </mat-card-content>
+  <button
+    [disabled]="clicked"
+    mat-raised-button
+    color="primary"
+    (click)="search()"
+    class="searchButton"
+  >
+    Search
+  </button>
+</mat-card>
+
+<app-computer-details *ngFor="let computer of listComputer" [computer]="computer"></app-computer-details>

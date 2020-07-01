@@ -10,6 +10,11 @@ import { MatProgressSpinnerModule } from '@angular/material/progress-spinner';
 import { MatTableModule } from '@angular/material/table';
 import { MatGridListModule } from '@angular/material/grid-list';
 import {MatMenuModule} from '@angular/material/menu';
+import { MatSelectModule } from '@angular/material/select';
+import { MatInputModule } from '@angular/material/input';
+import { MatChipsModule } from '@angular/material/chips';
+import { MatDialogModule } from '@angular/material/dialog';
+
 
 
 const materialModule = [
@@ -21,7 +26,11 @@ const materialModule = [
   MatProgressSpinnerModule,
   MatTableModule,
   MatGridListModule,
-  MatMenuModule
+  MatMenuModule,
+  MatSelectModule,
+  MatInputModule,
+  MatChipsModule,
+  MatDialogModule,
 ];
 
 @NgModule({

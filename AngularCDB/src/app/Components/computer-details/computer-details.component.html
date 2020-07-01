@@ -1,6 +1,6 @@
-<mat-card class="example-card">
+<mat-card class="main-card">
   <mat-card-header>
-    <mat-card-title>Lenovo ThinkPad</mat-card-title>
+    <mat-card-title>{{computer.name}}</mat-card-title>
   </mat-card-header>
   <mat-card-content>
     <mat-expansion-panel
@@ -18,7 +18,7 @@
             Date de mise en service
           </div>
           <div class="information">
-            2000
+            {{computer.introduced}}
           </div>
         </li>
         <li>
@@ -26,7 +26,7 @@
             Date de fin de service
           </div>
           <div class="information">
-            2020
+            {{computer.discontinued}}
           </div>
         </li>
         <li>
@@ -34,10 +34,18 @@
             société
           </div>
           <div class="information">
-            Lenovo
+            {{computer.company.name}}
           </div>
         </li>
       </ul>
+      <div class="buttonContainer">
+        <button mat-raised-button color="primary" class="bottomButton" (click)="editElement(computer.id)">
+          Edit
+        </button>
+        <button mat-raised-button color="warn" class="bottomButton" (click)="deleteElement(computer.id)">
+          Delete
+        </button>
+      </div>
     </mat-expansion-panel>
   </mat-card-content>
 </mat-card>
