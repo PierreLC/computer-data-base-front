@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { Computer } from 'src/app/Models/Computer/computer.model';
+import { MOCK_RECIPES } from '../MOCK/mockComputers';
 
 @Component({
   selector: 'app-list-elements',
@@ -13,9 +15,12 @@ export class ListElementsComponent implements OnInit {
   clicked: boolean = false
   ordered: string;
 
+  listComputer;
+
   constructor() { }
 
   ngOnInit(): void {
+    this.listComputer = MOCK_RECIPES;
   }
 
   onSelectCategoryChange() {

@@ -1,5 +1,5 @@
-.example-card {
-  margin: 1%;
+.main-card {
+  margin: 1% 15vw;
 }
 
 .titleInformation {
@@ -8,4 +8,12 @@
 
 .information {
   float:right;
+}
+
+.buttonContainer {
+  text-align: right;
+}
+
+.bottomButton {
+  margin-right: 1%;
 }
