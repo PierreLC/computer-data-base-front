@@ -1,1 +1,44 @@
-<p>computer-details works!</p>
+<mat-card class="example-card">
+  <mat-card-header>
+    <mat-card-title>Lenovo ThinkPad</mat-card-title>
+  </mat-card-header>
+  <mat-card-content>
+    <mat-expansion-panel
+      (opened)="panelOpenState = true"
+      (closed)="panelOpenState = false"
+    >
+      <mat-expansion-panel-header>
+        <mat-panel-title>
+          Details
+        </mat-panel-title>
+      </mat-expansion-panel-header>
+      <ul style="list-style: unset;">
+        <li>
+          <div class="titleInformation">
+            Date de mise en service
+          </div>
+          <div class="information">
+            2000
+          </div>
+        </li>
+        <li>
+          <div class="titleInformation">
+            Date de fin de service
+          </div>
+          <div class="information">
+            2020
+          </div>
+        </li>
+        <li>
+          <div class="titleInformation">
+            société
+          </div>
+          <div class="information">
+            Lenovo
+          </div>
+        </li>
+      </ul>
+      <button mat-raised-button color="primary">Edit</button>
+    </mat-expansion-panel>
+  </mat-card-content>
+</mat-card>

@@ -7,6 +7,10 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ListElementsComponent implements OnInit {
 
+  selectedCategory: string;
+  selectedNumberElement: string;
+  value = '';
+
   constructor() { }
 
   ngOnInit(): void {

@@ -6,7 +6,11 @@ import { MatCardModule } from '@angular/material/card';
 import { MatButtonModule } from '@angular/material/button';
 import { MatExpansionModule } from '@angular/material/expansion';
 import { MatProgressSpinnerModule } from '@angular/material/progress-spinner';
-
+import { MatTableModule } from '@angular/material/table';
+import { MatGridListModule } from '@angular/material/grid-list';
+import { MatSelectModule } from '@angular/material/select';
+import { MatInputModule } from '@angular/material/input';
+import { MatChipsModule } from '@angular/material/chips';
 
 
 const materialModule = [
@@ -16,6 +20,11 @@ const materialModule = [
   MatButtonModule,
   MatExpansionModule,
   MatProgressSpinnerModule,
+  MatTableModule,
+  MatGridListModule,
+  MatSelectModule,
+  MatInputModule,
+  MatChipsModule,
 ];
 
 @NgModule({
@@ -29,11 +38,4 @@ const materialModule = [
   ]
 })
 
-
-@NgModule({
-  declarations: [],
-  imports: [
-    CommonModule
-  ]
-})
 export class CustomMaterialModule { }
