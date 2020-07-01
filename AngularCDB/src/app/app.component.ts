@@ -5,7 +5,6 @@ import { TranslateService } from '@ngx-translate/core'
   selector: 'app-root',
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.scss'],
-  template: `<div>{{ 'HELLO' | translate:param }}</div>`,
 })
 
 export class AppComponent {

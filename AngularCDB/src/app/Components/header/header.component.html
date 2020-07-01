@@ -1,25 +1,29 @@
- <mat-toolbar-row class="toolbar">
-    <a mat-button [routerLink]="'/applogin'">
-      <mat-icon>home</mat-icon>
-      {{ 'HEADER.TITLE' | translate }}
-    </a>
-    <a class="addButton" mat-button [routerLink]="'/applogin' + '/add'">
-      <mat-icon class = "iconAdd">add_box</mat-icon>
-      {{ 'HEADER.ADD' | translate }}
-    </a>
-    <a class="notificationsButton" mat-button [routerLink]="'/applogin'">
-      <mat-icon>notifications</mat-icon>
-      {{ 'HEADER.NOTIFICATIONS' | translate }}
-    </a>
-    <a class="languagesButton" mat-button [routerLink]="'/applogin'">
-      <mat-icon>language</mat-icon>
-      {{ 'HEADER.LANGUAGE' | translate }}
-    </a>
-    <a class="personButton" mat-button [routerLink]="'/authentication'">
-      <mat-icon>person</mat-icon>
-      {{ 'HEADER.LOGOUT' | translate }}
-    </a>
-  </mat-toolbar-row>
-  <mat-toolbar class="LBC">
+<mat-toolbar-row class="toolbar">
+  <a mat-button [routerLink]="'/applogin'">
+    <mat-icon>home</mat-icon>
+    {{ "HEADER.TITLE" | translate }}
+  </a>
 
-  </mat-toolbar>
+  <a class="addButton" mat-button [routerLink]="'/applogin' + '/add'">
+    <mat-icon class="iconAdd">add_box</mat-icon>
+    {{ "HEADER.ADD" | translate }}
+  </a>
+
+  <a class="notificationsButton" mat-button [routerLink]="'/applogin'">
+    <mat-icon>notifications</mat-icon>
+    {{ "HEADER.NOTIFICATIONS" | translate }}
+  </a>
+
+  <button class="languagesButton" mat-button [matMenuTriggerFor]="menu"><mat-icon>language</mat-icon>{{ 'HEADER.LANGUAGE' | translate }}</button>
+  <mat-menu #menu="matMenu">
+    <button mat-menu-item (click)="useLanguage('fr')"><img src="/assets/images/fr-flag.png" alt="french flag"/></button>
+    <button mat-menu-item (click)="useLanguage('en')"><img src="/assets/images/en-flag.png" alt="english flag"/></button>
+  </mat-menu>
+
+  <a class="personButton" mat-button [routerLink]="'/authentication'">
+    <mat-icon>person</mat-icon>
+    {{ "HEADER.LOGOUT" | translate }}
+  </a>
+
+</mat-toolbar-row>
+<mat-toolbar class="LBC"> </mat-toolbar>
