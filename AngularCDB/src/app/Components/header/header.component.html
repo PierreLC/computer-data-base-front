@@ -1,1 +1,25 @@
-<p>header works!</p>
+ <mat-toolbar-row class="toolbar">
+    <a mat-button [routerLink]="'/applogin'">
+      <mat-icon>home</mat-icon>
+      Home
+    </a>
+    <a class="addButton" mat-button [routerLink]="'/applogin' + '/add'">
+      <mat-icon class = "iconAdd">add_box</mat-icon>
+      Add
+    </a>
+    <a class="notificationsButton" mat-button [routerLink]="'/applogin'">
+      <mat-icon>notifications</mat-icon>
+      Notification
+    </a>
+    <a class="languagesButton" mat-button [routerLink]="'/applogin'">
+      <mat-icon>language</mat-icon>
+      Language
+    </a>
+    <a class="personButton" mat-button [routerLink]="'/authentication'">
+      <mat-icon>person</mat-icon>
+      Disconnect
+    </a>
+  </mat-toolbar-row>
+  <mat-toolbar class="LBC">
+
+  </mat-toolbar>
